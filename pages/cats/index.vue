@@ -1,11 +1,9 @@
 <template>
-  <div class="container">
-    <CFlex pt="6rem">
+    <CFlex pt="6rem" class="container" v-bind="mainStyles[colorMode]" minHeight="100vh">
       <CFlex
         flexDirection="column"
         width="15rem"
         position="fixed"
-        bg="white"
         alignItems="center"
       >
         <CAccordion :allow-toggle="true">
@@ -56,7 +54,6 @@
         <SimpleGallery :catsArray="filteredCatsArray" />
       </CFlex>
     </CFlex>
-  </div>
 </template>
 
 <script lang="js">
