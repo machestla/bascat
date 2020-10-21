@@ -13,7 +13,7 @@
             <CAccordionHeader> Tags </CAccordionHeader>
             <CAccordionPanel pb="4">
               <CFlex flexDirection="column">
-                <CBox v-for="(tag, index) in onlyTags" v-bind:key="index">
+                <CBox v-for="(tag, index) in onlyTags" :key="index">
                   <input
                     type="checkbox"
                     v-model="selectedTags"
@@ -53,7 +53,7 @@
         </CAccordion>
       </CFlex>
       <CFlex flexDirection="column" alignItems="center" ml="15rem">
-        <SimpleGallery v-bind:catsArray="filteredCatsArray" />
+        <SimpleGallery :catsArray="filteredCatsArray" />
       </CFlex>
     </CFlex>
   </div>
