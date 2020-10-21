@@ -12,6 +12,8 @@
         variant="ghost"
         aria-label="go to gallery page"
         icon="chevron-right"
+        as="nuxt-link"
+        :to="customGalleryLink"
       />
     </CHeading>
     <SimpleGallery v-bind:catsArray="catsArray" />
