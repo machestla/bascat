@@ -3,6 +3,7 @@
       pt="5rem" 
       w="100vw"
       flex-dir="column"
+      v-bind="mainStyles[colorMode]" 
       >
     <CImage :src="cat.imageSrc" :alt="cat.imageDescription" w="100vw"/>
     <CBox overflow="hidden" padding="1rem">
@@ -76,6 +77,7 @@ Vue.component("font-awesome-layers-text", FontAwesomeLayersText);
 
 export default {
   name: "Details",
+  inject: ['$chakraColorMode', '$toggleColorMode'],
   components: {
     CBox,
     CGrid,
@@ -85,12 +87,29 @@ export default {
     CButton,
     CFlex,
   },
+   data () {
+    return {
+      mainStyles: {
+        dark: {
+          bg: 'gray.700',
+          color: 'whiteAlpha.900'
+        },
+        light: {
+          bg: 'white',
+          color: 'gray.900'
+        }
+      }
+    }
+  },
   computed: {
     cat:function() {
       return this.$store.state.cats.cats.find(
         (cat) => cat.id === this.$route.params.id
       );
     },
+    colorMode () {
+      return this.$chakraColorMode()
+    }
   },
 };
 </script>

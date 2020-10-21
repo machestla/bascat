@@ -1,36 +1,39 @@
 <template>
-  <CBox class="cart" padding="5rem">
-    <CBox
-      mt="1"
-      font-weight="bold"
-      as="h1"
-      line-height="tight"
-      is-truncated
-      fontSize="2xl"
-      >Your Cart</CBox
-    >
-    <CBox v-show="!cats.length"><i>Please add some cats to cart.</i></CBox>
-    <SimpleGallery v-bind:catsArray="cats" />
-    <CBox mt="4" textAlign="right" font-weight="bold" font-size="2xl">
-      Total: {{ total }}
+  <CFlex class="cart" direction="column" justify="space-between" padding="5rem" v-bind="mainStyles[colorMode]" minHeight="100vh">
+    <CBox>
+      <CBox
+        mt="1"
+        font-weight="bold"
+        as="h1"
+        line-height="tight"
+        is-truncated
+        fontSize="2xl"
+        >Your Cart</CBox
+      >
+      <CBox v-show="!cats.length"><i>Please add some cats to cart.</i></CBox>
+      <SimpleGallery v-bind:catsArray="cats" />
     </CBox>
-    <CBox mt="4" textAlign="right" font-weight="bold" font-size="2xl" :display="total ==='0 euros' ? 'none' : 'block'">
-      <CButton variant-color="red" @click="showModal = true">Still want to buy it</CButton>
-      <CModal :is-open="showModal" :closeOnOverlayClick="false">
-        <CModalOverlay/>
-        <CModalContent>
-          <CModalHeader>Hell No!</CModalHeader>
-          <CModalBody><strong>I . SAID . NO!</strong><br/> Don't be obstinate!</CModalBody>
-          <CModalFooter>
-            <CButton @click="showModal = false">Cancel</CButton>
-            <CButton margin-left="3" variant-color="red" @click="showToast"> Still want to buy this fucking cats</CButton>
-          </CModalFooter>
-          <CModalCloseButton @click="showModal = false"/>
-        </CModalContent>
-      </CModal>
+    <CBox>
+      <CBox mt="4" textAlign="right" font-weight="bold" font-size="2xl" bottom="5rem">
+        Total: {{ total }}
+      </CBox>
+      <CBox mt="4" textAlign="right" font-weight="bold" font-size="2xl" :display="total ==='0 euros' ? 'none' : 'block'">
+        <CButton variant-color="red" @click="showModal = true">Still want to buy it</CButton>
+        <CModal :is-open="showModal" :closeOnOverlayClick="false">
+          <CModalOverlay/>
+          <CModalContent>
+            <CModalHeader>Hell No!</CModalHeader>
+            <CModalBody><strong>I . SAID . NO!</strong><br/> Don't be obstinate!</CModalBody>
+            <CModalFooter>
+              <CButton @click="showModal = false">Cancel</CButton>
+              <CButton margin-left="3" variant-color="red" @click="showToast"> Still want to buy this fucking cats</CButton>
+            </CModalFooter>
+            <CModalCloseButton @click="showModal = false"/>
+          </CModalContent>
+        </CModal>
+      </CBox>
     </CBox>
-
-  </CBox>
+  </CFlex>
 </template>
 
 <script lang="js">
@@ -45,7 +48,8 @@ import {
   CModalHeader,
   CModalFooter,
   CModalBody,
-  CModalCloseButton
+  CModalCloseButton,
+  CFlex
 } from '@chakra-ui/vue';
 export default {
     name: 'ShoppingCart',
@@ -60,7 +64,8 @@ export default {
     CModalHeader,
     CModalFooter,
     CModalBody,
-    CModalCloseButton
+    CModalCloseButton,
+    CFlex
   },
   data () {
     return {
@@ -87,12 +92,6 @@ export default {
     }),
     colorMode () {
       return this.$chakraColorMode()
-    },
-    theme () {
-      return this.$chakraTheme()
-    },
-    toggleColorMode () {
-      return this.$toggleColorMode
     }
   },
   methods: {
