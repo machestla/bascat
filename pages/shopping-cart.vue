@@ -11,9 +11,25 @@
     >
     <CBox v-show="!cats.length"><i>Please add some cats to cart.</i></CBox>
     <SimpleGallery v-bind:catsArray="cats" />
-    <CBox mt="4" textAlign="right" font-weight="bold" font-size="2xl"
-      >Total: {{ total }}</CBox
-    >
+    <CBox mt="4" textAlign="right" font-weight="bold" font-size="2xl">
+      Total: {{ total }}
+    </CBox>
+    <CBox mt="4" textAlign="right" font-weight="bold" font-size="2xl" :display="total ==='0 euros' ? 'none' : 'block'">
+      <CButton variant-color="red" @click="showModal = true">Still want to buy it</CButton>
+      <CModal :is-open="showModal" :closeOnOverlayClick="false">
+        <CModalOverlay/>
+        <CModalContent>
+          <CModalHeader>Hell No!</CModalHeader>
+          <CModalBody><strong>I . SAID . NO!</strong><br/> Don't be obstinate!</CModalBody>
+          <CModalFooter>
+            <CButton @click="showModal = false">Cancel</CButton>
+            <CButton margin-left="3" variant-color="red" @click="showToast"> Still want to buy this fucking cats</CButton>
+          </CModalFooter>
+          <CModalCloseButton @click="showModal = false"/>
+        </CModalContent>
+      </CModal>
+    </CBox>
+
   </CBox>
 </template>
 
@@ -22,7 +38,14 @@ import { mapGetters, mapState } from 'vuex'
 import SimpleGallery from "../components/gallery/simple";
 import {
   CBox,
-  CButton
+  CButton,
+  CModal,
+  CModalOverlay,
+  CModalContent,
+  CModalHeader,
+  CModalFooter,
+  CModalBody,
+  CModalCloseButton
 } from '@chakra-ui/vue';
 export default {
     name: 'ShoppingCart',
@@ -30,10 +53,18 @@ export default {
   components: {
     CBox,
     CButton,
-    SimpleGallery
+    SimpleGallery,
+    CModal,
+    CModalOverlay,
+    CModalContent,
+    CModalHeader,
+    CModalFooter,
+    CModalBody,
+    CModalCloseButton
   },
   data () {
     return {
+      showModal: false,
       mainStyles: {
         dark: {
           bg: 'gray.700',
@@ -67,6 +98,14 @@ export default {
   methods: {
     checkout (cats) {
       this.$store.dispatch('cart/checkout', cats)
+    },
+    showToast() {
+      this.$toast({
+        title: 'Hummmm, read one more time the message:',
+        description: "NO NO NO NO NO NO NO NO NO NO NO NO NO",
+        status: 'error',
+        duration: 10000
+      })
     }
   }
 }
