@@ -1,0 +1,33 @@
+<svg width="78" height="79" viewBox="0 0 78 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="47" height="45">
+<ellipse cx="23.1149" cy="22.2979" rx="18.7456" ry="17.5" transform="rotate(17.3682 23.1149 22.2979)" fill="#4F4F4F"/>
+</mask>
+<g mask="url(#mask0)">
+<ellipse cx="10.8523" cy="27.8841" rx="18.7456" ry="17.5" transform="rotate(17.3682 10.8523 27.8841)" fill="#4F4F4F"/>
+</g>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="32" y="-1" width="46" height="45">
+<ellipse rx="18.745" ry="17.5" transform="matrix(-0.965784 0.259346 0.259346 0.965784 54.746 21.762)" fill="#4F4F4F"/>
+</mask>
+<g mask="url(#mask1)">
+<ellipse rx="18.745" ry="17.5" transform="matrix(-0.965784 0.259346 0.259346 0.965784 66.7702 27.8437)" fill="#4F4F4F"/>
+</g>
+<ellipse cx="39" cy="46.5" rx="33" ry="32.5" fill="#333333"/>
+<ellipse cx="39" cy="61.5" rx="21" ry="12.5" fill="#4F4F4F"/>
+<mask id="mask2" mask-type="alpha" maskUnits="userSpaceOnUse" x="44" y="34" width="12" height="12">
+<circle cx="50" cy="40" r="6" fill="#D2D373"/>
+</mask>
+<g mask="url(#mask2)">
+<circle cx="50" cy="38" r="6" fill="#D2D373"/>
+<circle cx="59" cy="38" r="6" fill="#D2D373"/>
+</g>
+<mask id="mask3" mask-type="alpha" maskUnits="userSpaceOnUse" x="22" y="34" width="12" height="12">
+<circle r="6" transform="matrix(-1 0 0 1 28 40)" fill="#D2D373"/>
+</mask>
+<g mask="url(#mask3)">
+<circle r="6" transform="matrix(-1 0 0 1 28 38)" fill="#D2D373"/>
+<circle r="6" transform="matrix(-1 0 0 1 19 38)" fill="#D2D373"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M40.2939 61.8601C39.8772 61.9517 39.4442 62 39 62C38.5558 62 38.1228 61.9517 37.7061 61.8601C37.8969 61.2745 38 60.6493 38 60C38 57.1305 35.9857 54.7315 33.2939 54.1399C34.0768 51.7367 36.3356 50 39 50C41.6644 50 43.9232 51.7367 44.7061 54.1399C42.0143 54.7315 40 57.1305 40 60C40 60.6493 40.1031 61.2745 40.2939 61.8601Z" fill="#333333"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M32 63.6C35.3137 63.6 38 61.7196 38 59.4C38 59.0036 37.9215 58.6199 37.7749 58.2563C38.5436 58.9623 39 59.8438 39 60.8C39 63.1196 36.3137 65 33 65C30.2526 65 27.9366 63.7074 27.2251 61.9436C28.3212 62.9503 30.0522 63.6 32 63.6Z" fill="#333333"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M45.9258 63.3436C42.6472 63.3436 39.9894 61.4632 39.9894 59.1436C39.9894 58.7472 40.067 58.3636 40.2121 58C39.4516 58.706 39 59.5875 39 60.5436C39 62.8632 41.6578 64.7436 44.9364 64.7436C47.6546 64.7436 49.9461 63.4511 50.65 61.6873C49.5655 62.694 47.8529 63.3436 45.9258 63.3436Z" fill="#333333"/>
+</svg>
