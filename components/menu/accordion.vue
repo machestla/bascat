@@ -9,17 +9,6 @@
       </CAccordionItem>
       <CAccordionItem>
         <CAccordionHeader>
-          <CBox flex="1" text-align="left"> Categories </CBox>
-          <CAccordionIcon />
-        </CAccordionHeader>
-        <CAccordionPanel pb="4">
-          <p>colors</p>
-          <p>breeds</p>
-          <p>ages</p>
-        </CAccordionPanel>
-      </CAccordionItem>
-      <CAccordionItem>
-        <CAccordionHeader>
           <CBox flex="1" text-align="left"> Account</CBox>
           <CAccordionIcon />
         </CAccordionHeader>
@@ -29,6 +18,7 @@
           </nuxt-link>
           <p>View Profil</p>
           <nuxt-link to="/settings">Settings</nuxt-link>
+          <CBox flex="1" text-align="left"> Log Out</CBox>
         </CAccordionPanel>
       </CAccordionItem>
       <CAccordionItem>
@@ -36,11 +26,6 @@
           <nuxt-link to="/about">
             <CBox flex="1" text-align="left"> About Us</CBox>
           </nuxt-link>
-        </CAccordionHeader>
-      </CAccordionItem>
-      <CAccordionItem>
-        <CAccordionHeader>
-          <CBox flex="1" text-align="left"> Log Out</CBox>
         </CAccordionHeader>
       </CAccordionItem>
     </CAccordion>
