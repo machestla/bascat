@@ -33,3 +33,8 @@ export default {
   }
 }
 </script>
+<style>
+button{
+  z-index:0 !important
+}
+</style>
