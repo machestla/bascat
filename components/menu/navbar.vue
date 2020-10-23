@@ -9,14 +9,13 @@
     paddingRight="1.5rem"
     position="fixed"
     v-bind="mainStyles[colorMode]"
-    zIndex="1"
+    :bg="colorMode === 'light' ? 'white' : 'gray.700'"
   >
     <MenuDrawer />
     <nuxt-link to="/">
       <CHeading as="h1" size="xl">BASCAT.COM</CHeading>
     </nuxt-link>
     <CFlex>
-      <!-- <SearchBar/> -->
       <nuxt-link to="/shopping-cart">
         <CButton ariaLabel="shopping cart button" marginLeft="1em">
           <font-awesome-icon icon="shopping-cart" />
