@@ -9,6 +9,7 @@
     paddingRight="1.5rem"
     position="fixed"
     v-bind="mainStyles[colorMode]"
+    zIndex="1"
   >
     <MenuDrawer />
     <nuxt-link to="/">
