@@ -4,7 +4,7 @@ export const state = () => ({
   users: [{
     id: "salade",
     name: "Mâche",
-    familyName: "AndRoquette"
+    familyName: "AndRoquette",
     password: "IEatSalads",
     age: "23",
     email: "machesartandwork@gmail.com",
